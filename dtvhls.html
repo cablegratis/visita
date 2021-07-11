@@ -1,0 +1,72 @@
+
+<head>
+<meta charset="utf-8">
+<meta http-Equiv="Cache-Control" Content="no-cache" />
+<meta http-Equiv="Pragma" Content="no-cache" />
+<meta http-Equiv="Expires" Content="0" />
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="refresh" content="15" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">location.href='https://canal.cablegratis.online';</script>
+
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>Para reproducir esté contenido necesitas un reproductor HLS. Para Chrome te recomendamos la extensión: <b>Reproductor M3U8 - HLS + DASH Player</b></p>
+<p>Enlace de la extensión: <a target="_blank" href="https://chrome.google.com/webstore/detail/reproductor-m3u8-hls-%20-da/lcipembjfkmeggpihdpdgnjildgniffl">Reproductor M3U8 - HLS + DASH Player</a></p>
+<i>Cierre este mensaje si ya tiene un reproductor para este contenido.</i>
+</div>
+</div>
+<a target="_bank" id="enlace" href="#" rel="noopener noreferrer"><img src="https://i.imgur.com/cIexMa9.png" width="100%"></a>
+<script>
+$.ajax({
+    url: "https://int21h.blowerclaster.xyz/json/brasil.json?" + Math.random().toString(36).substring(7),
+    type: 'GET',
+    cache: false,
+    success: function(jsonResponse) {
+        //  alert(jQuery.dataType);
+        //alert(jsonResponse);
+        if (jsonResponse) {
+            var m3u8 = jsonResponse['stream_url'];
+            document.getElementById('enlace').setAttribute('href',m3u8);
+            if(/Android|iPhone|iPad|iPod|BlackBerry|webOS|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                //alert(m3u8);
+                location.href=m3u8;
+
+            }else{
+                modal.style.display = "block";
+            }
+        }
+
+    },
+    error: function() {
+       // alert("No");
+    }
+});                     
+// Get the modal
+var modal = document.getElementById("myModal");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}                       
+</script>
+  </body>
